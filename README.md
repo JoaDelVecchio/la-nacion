@@ -81,7 +81,7 @@ Mantengo todo lo relacionado con **routing dentro de `app/`** y separo el resto 
 
 ---
 
-## Decisiones de Diseño y Desarrollo
+## Razonamiento y Decisiones de Diseño y Desarrollo
 
 # Enfoque de Fetching y Renderizado
 
