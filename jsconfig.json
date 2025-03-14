@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
+  "include": ["utils/utils.js", "lib/config.js", "services/articleService.js"],
+  "exclude": ["node_modules"]
+}
