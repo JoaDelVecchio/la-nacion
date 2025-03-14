@@ -31,6 +31,10 @@ Mantengo todo lo relacionado con **routing dentro de `app/`** y separo el resto 
 │
 │── 📂 app
 │   ├── 📂 api/webhooks     # Webhook para revalidar cache de artículos mediante backend/CMS
+    │   ├── route.js
+│   ├── 📂 tema/[slug]
+    │   ├── layout.jsx
+    │   ├── page.jsx
 │   ├── error.jsx
 │   ├── layout.jsx
 │   ├── page.jsx
