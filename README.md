@@ -1,6 +1,6 @@
-# 📌 Documentación del Proyecto: Página de Noticias
+# Documentación
 
-## 📑 Tabla de Contenidos
+## Tabla de Contenidos
 
 1. [Introducción](#introduccion)
 2. [Estructura del Proyecto](#estructura-del-proyecto)
