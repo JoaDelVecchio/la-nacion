@@ -7,8 +7,7 @@ const LoadMoreButton = React.memo(({ onClick }) => {
         <button
           className="--btn --secondary"
           onClick={onClick}
-          aria-label=" MÁS NOTAS DE ACUMULADO GRILLA"
-          role="loadMoreButton"
+          aria-label="MÁS NOTAS DE ACUMULADO GRILLA"
         >
           MÁS NOTAS DE ACUMULADO GRILLA
         </button>

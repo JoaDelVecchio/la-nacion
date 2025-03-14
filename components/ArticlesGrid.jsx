@@ -13,9 +13,9 @@ const ArticlesGrid = ({ articles }) => {
     <section className="row-gap-tablet-2 row-gap-deskxl-3 hlp-degrade">
       {articles.map((article, index) =>
         index < 8 ? (
-          <ArticleCard key={article._id} article={article} role="article" />
+          <ArticleCard key={article._id} article={article} />
         ) : (
-          <LazyArticleCard key={article._id} article={article} role="article" />
+          <LazyArticleCard key={article._id} article={article} />
         )
       )}
     </section>

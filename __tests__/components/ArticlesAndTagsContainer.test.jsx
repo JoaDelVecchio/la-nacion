@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen, fireEvent, act } from "@testing-library/react";
 import {
   mockApiResponse,
   expectedArticlesAfterFetch,
@@ -33,10 +33,12 @@ it("deberia renderizar el número correcto de artículos al inicio", () => {
   );
 });
 
-it("debería aumentar correctamente el número de artículos mostrados al hacer clic en el botón de Load More", () => {
+it("debería aumentar correctamente el número de artículos mostrados al hacer clic en el botón de Load More", async () => {
   render(<ArticlesAndTagsContainer articles={mockApiResponse.articles} />);
 
-  const loadMoreButton = screen.getByRole("loadMoreButton");
+  const loadMoreButton = screen.getByRole("button", {
+    name: /MÁS NOTAS DE ACUMULADO GRILLA/i,
+  });
 
   const initialArticleCount = screen.getAllByRole("article").length;
 
@@ -45,7 +47,9 @@ it("debería aumentar correctamente el número de artículos mostrados al hacer 
     mockApiResponse.articles.length
   );
 
-  fireEvent.click(loadMoreButton);
+  await act(async () => {
+    fireEvent.click(loadMoreButton);
+  });
 
   const articleCountAfterClick = screen.getAllByRole("article").length;
 
