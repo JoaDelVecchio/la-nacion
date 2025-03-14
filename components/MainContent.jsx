@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import Loading from "@/app/loading";
+import Loading from "../app/loading";
 import GridTitle from "./GridTitle";
 import ArticlesDataLoader from "./ArticlesDataLoader";
 const MainContent = () => {

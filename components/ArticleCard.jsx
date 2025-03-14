@@ -25,7 +25,7 @@ const ArticleCard = ({ article }) => {
       </section>
       <div className="mod-caja-nota__descrip">
         <h2 className="com-title-acu">
-          <Link href={`/article/${_id}`}>
+          <Link href={"#"}>
             <b>{headlines?.basic}</b>
           </Link>
         </h2>
