@@ -10,13 +10,13 @@
 
 ---
 
-## 📌 Introducción
+## Introducción
 
 Esta es una **web** que consume un API con artículos y los muestra en una grilla, desarrollada con nextjs15 y con un enfoque en Performance, accesibilidad y CoreWebVitals.
 
 ---
 
-## 📌 Estructura del Proyecto
+## Estructura del Proyecto
 
 Mantengo todo lo relacionado con **routing dentro de `app/`** y separo el resto del código en carpetas específicas (`components/`, `services/`, `utils/`), permitiendo:
 
@@ -73,22 +73,22 @@ Mantengo todo lo relacionado con **routing dentro de `app/`** y separo el resto 
 
 ---
 
-## 📌 Instalación y Configuración
+## Instalación y Configuración
 
-### **📥 Clonar el Repositorio**
+### **Clonar el Repositorio**
 
 ```bash
-git clone https://github.com/usuario/proyecto-noticias.git
+git clone https://github.com/JoaDelVecchio/la-nacion.git
 cd proyecto-noticias
 ```
 
-### **📦 Instalar dependencias**
+### **Instalar dependencias**
 
 ```bash
 npm install
 ```
 
-### **🔧 Configurar Variables de Entorno**
+### **Configurar Variables de Entorno**
 
 Crear un archivo `.env.local` con la siguiente variable:
 
@@ -96,7 +96,7 @@ Crear un archivo `.env.local` con la siguiente variable:
 API_URL=https://jrt2bb3b2nlkw5ozvfcld62wbe0pnifh.lambda-url.us-east-1.on.aws/
 ```
 
-### **🚀 Ejecutar el Proyecto**
+### **Ejecutar el Proyecto**
 
 ```bash
 npm run dev
@@ -104,9 +104,9 @@ npm run dev
 
 ---
 
-## 📌 Decisiones de Diseño y Desarrollo
+## Decisiones de Diseño y Desarrollo
 
-# 📌 Enfoque de Fetching y Renderizado
+# Enfoque de Fetching y Renderizado
 
 Para estructurar el desarrollo en cuanto a la búsqueda y renderizado de artículos, comparé diferentes enfoques:  
 **Server-Side Rendering (SSR), Client-Side Rendering (CSR) y un enfoque híbrido (SSR + CSR).**
@@ -130,25 +130,25 @@ Para mejorar la **experiencia del usuario y la velocidad**, implementé la **pag
 
 Esto garantiza que la interfaz siga siendo **rápida y responsiva**, evitando cálculos innecesarios y asegurando que **solo se rendericen los componentes esenciales** en cada momento.
 
-# 🛠️ Enfoque en Modularidad y Separación de Responsabilidades
+# Enfoque en Modularidad y Separación de Responsabilidades
 
 Para mantener un código claro, escalable y fácil de mantener, estructuré el proyecto separando las responsabilidades en distintas carpetas y componentes. Cada componente cumple una única responsabilidad, separando la lógica de negocio de la presentación (Presentational & Container Components Pattern). Esto mejora la modularidad, permitiendo hacer cambios en la lógica sin afectar la UI y viceversa.
 
-## 📌 Optimizaciones en Accesibilidad y Performance
+## Optimizaciones en Accesibilidad y Performance
 
 Modifiqué los `<a>` e `<img>` por `Link` e `Image` de Next.js para mejorar **accesibilidad, SEO y Core Web Vitals**. Esto optimiza la **carga de imágenes** con `next/image` (mejorando el **LCP**) y permite un **pre-renderizado eficiente de enlaces** con `next/link`, reduciendo el tiempo de navegación. Además, `Image` usa `unoptimized` para evitar posibles conflictos con el css ya definido.
 
 ---
 
-## 📌 Decisión sobre Context API
+## Decisión sobre Context API
 
 No utilicé **Context API** porque los datos no se compartían entre múltiples componentes ni requerían un estado global, evitando así una complejidad innecesaria. Opté simplemente por **pasar los datos por `props`** desde `ArticlesDataLoader` hacia `ArticlesAndTagsContainer`, manteniendo el código más limpio y eficiente.
 
 ---
 
-## 📌 Unit Testing 🧪
+## Unit Testing 🧪
 
-### 🚀 **Ejecutar Pruebas**
+### **Ejecutar Pruebas**
 
 Ejemplo de ejecución de pruebas unitarias y de componentes:
 
@@ -161,4 +161,5 @@ npm test __tests__/components/ArticlesAndTagsContainer.test.jsx
 
 ---
 ```
+
 # la-nacion
