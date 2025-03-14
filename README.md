@@ -4,15 +4,19 @@
 
 1. [Introducción](#introduccion)
 2. [Estructura del Proyecto](#estructura-del-proyecto)
-3. [Instalación y Configuración](#instalacion-y-configuracion)
-4. [Decisiones de Diseño y Desarrollo](#decisiones-de-diseno-y-desarrollo)
-5. [Testing](#testing)
+3. [Decisiones de Diseño y Desarrollo](#decisiones-de-diseno-y-desarrollo)
+4. [Testing](#testing)
+5. [Instalación y Configuración](#instalacion-y-configuracion)
 
 ---
 
 ## Introducción
 
 Esta es una **web** que consume un API con artículos y los muestra en una grilla, desarrollada con nextjs15 y con un enfoque en Performance, accesibilidad y CoreWebVitals.
+
+La aplicación está desplegada en **Vercel** y puede accederse en el siguiente enlace:
+
+[https://la-nacion-pearl.vercel.app/](https://la-nacion-pearl.vercel.app/)
 
 ---
 
@@ -77,37 +81,6 @@ Mantengo todo lo relacionado con **routing dentro de `app/`** y separo el resto 
 
 ---
 
-## Instalación y Configuración
-
-### **Clonar el Repositorio**
-
-```bash
-git clone https://github.com/JoaDelVecchio/la-nacion.git
-cd proyecto-noticias
-```
-
-### **Instalar dependencias**
-
-```bash
-npm install
-```
-
-### **Configurar Variables de Entorno**
-
-Crear un archivo `.env.local` con la siguiente variable:
-
-```
-API_URL=https://jrt2bb3b2nlkw5ozvfcld62wbe0pnifh.lambda-url.us-east-1.on.aws/
-```
-
-### **Ejecutar el Proyecto**
-
-```bash
-npm run dev
-```
-
----
-
 ## Decisiones de Diseño y Desarrollo
 
 # Enfoque de Fetching y Renderizado
@@ -142,6 +115,10 @@ Para mantener un código claro, escalable y fácil de mantener, estructuré el p
 
 Modifiqué los `<a>` e `<img>` por `Link` e `Image` de Next.js para mejorar **accesibilidad, SEO y Core Web Vitals**. Esto optimiza la **carga de imágenes** con `next/image` (mejorando el **LCP**) y permite un **pre-renderizado eficiente de enlaces** con `next/link`, reduciendo el tiempo de navegación. Además, `Image` usa `unoptimized` para evitar posibles conflictos con el css ya definido.
 
+## Optimización de Rendimiento en Lighthouse
+
+Optimizé al máximo el rendimiento de la aplicación siguiendo las mejores prácticas de **Lighthouse**, logrando excelentes resultados en métricas clave como **LCP, INP y CLS**. Hubo, sin embargo, un par de aspectos en **HTML y CSS** que podrían haberse mejorado aún más, pero no los modifiqué debido a la indicación de utilizar la estructura proporcionada.
+
 ---
 
 ## Decisión sobre Context API
@@ -165,5 +142,36 @@ npm test __tests__/components/ArticlesAndTagsContainer.test.jsx
 
 ---
 ```
+
+## Instalación y Configuración Local
+
+### **Clonar el Repositorio**
+
+```bash
+git clone https://github.com/JoaDelVecchio/la-nacion.git
+cd proyecto-noticias
+```
+
+### **Instalar dependencias**
+
+```bash
+npm install
+```
+
+### **Configurar Variables de Entorno**
+
+Crear un archivo `.env.local` con la siguiente variable:
+
+```
+API_URL=https://jrt2bb3b2nlkw5ozvfcld62wbe0pnifh.lambda-url.us-east-1.on.aws/
+```
+
+### **Ejecutar el Proyecto**
+
+```bash
+npm run dev
+```
+
+---
 
 # la-nacion
