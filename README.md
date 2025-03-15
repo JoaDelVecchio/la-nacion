@@ -102,7 +102,6 @@ Para mejorar la **experiencia del usuario y la velocidad**, implementé la **pag
 - `useMemo`
 - `useCallback`
 - `React.memo`
-- `dynamic()` de Next.js
 - Elementos de Next.js como `Image` (_unoptimized_, para evitar conflictos con CSS ya definido) y `Link`
 
 Esto garantiza que la interfaz siga siendo **rápida y responsiva**, evitando cálculos innecesarios y asegurando que **solo se rendericen los componentes esenciales** en cada momento.
