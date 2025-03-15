@@ -12,9 +12,7 @@ export const fetchArticles = cache(async () => {
   });
 
   if (!response.ok) {
-    throw new Error(
-      `Error al fetchear artículos, HTTP ${response.status}: ${response.statusText}`
-    );
+    throw new Error(`Error al fetchear artículos`);
   }
 
   const data = await response.json();
