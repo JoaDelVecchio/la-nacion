@@ -14,7 +14,8 @@
 
 Esta es una **web** que consume un API con artículos y los muestra en una grilla, desarrollada con nextjs15 y con un enfoque en Performance, accesibilidad y CoreWebVitals.
 
-### Lighthouse 
+### Lighthouse
+
 **Performance:** 🟢 100
 
 **Accessibility:** 🟢 98
@@ -22,7 +23,6 @@ Esta es una **web** que consume un API con artículos y los muestra en una grill
 **Best Practices:** 🟢 96
 
 **SEO:** 🟢 100
-
 
 La aplicación está desplegada en **Vercel** y puede accederse en el siguiente enlace:
 
@@ -112,7 +112,7 @@ Para mejorar la **experiencia del usuario y la velocidad**, implementé la **pag
 - `useMemo`
 - `useCallback`
 - `React.memo`
-- Elementos de Next.js como `Image` (_unoptimized_, para evitar conflictos con CSS ya definido) y `Link`
+- Utilizando elementos de NextJs como Image, aprovechando el priority para precargar las imágenes clave del inicio y el lazy loading para optimizar las que se cargan bajo demanda (con unoptimized, para evitar conflictos con el CSS ya definido), y Link para la precarga, mejorando así la navegación y el rendimiento.
 
 Esto garantiza que la interfaz siga siendo **rápida y responsiva**, evitando cálculos innecesarios y asegurando que **solo se rendericen los componentes esenciales** en cada momento.
 

@@ -1,11 +1,10 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { LCPImages } from "../lib/constants";
 
-const ArticleCard = ({ article }) => {
-  const { _id, headlines, display_date, promo_items } = article;
-  const imageUrl = promo_items?.basic?.url || null;
+const ArticleCard = ({ article, isPriorityImage }) => {
+  const { headlines, display_date, promo_items } = article;
+  const imageUrl = promo_items?.basic?.url;
 
   return imageUrl ? (
     <article className="mod-caja-nota lugares w-100-mobile">
@@ -15,8 +14,8 @@ const ArticleCard = ({ article }) => {
             <Image
               src={imageUrl}
               className="content-img"
-              alt={headlines?.basic | imageUrl}
-              priority={LCPImages.includes(imageUrl)}
+              alt={headlines?.basic || "Imagen del artículo de noticias"}
+              priority={isPriorityImage}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
