@@ -16,9 +16,13 @@ Esta es una **web** que consume un API con artículos y los muestra en una grill
 
 ### Lighthouse 
 **Performance:** 🟢 100
+
 **Accessibility:** 🟢 98
+
 **Best Practices:** 🟢 96
+
 **SEO:** 🟢 100
+
 
 La aplicación está desplegada en **Vercel** y puede accederse en el siguiente enlace:
 
